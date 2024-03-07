@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class TextBasedAdventure {
     boolean hasSword = false;
+    boolean hasKey = false;
     Scanner keyboardInput = new Scanner(System.in);
 
     public void execute() {
@@ -12,13 +13,15 @@ public class TextBasedAdventure {
     }
 
     public void start() {
-        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right");
+        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right\n3. Go to House");
         int input = keyboardInput.nextInt();
         if (input == 1) {
             goLeft();
         }
         else if (input == 2) {
             goRight();
+        } else if (input ==3){
+            goToHouse();
         }
     }
 
@@ -39,11 +42,20 @@ public class TextBasedAdventure {
             hasSword = true;
         }
         else {
-            System.out.println("There's nothing here...");
+            System.out.println("You found a key. This might be able to open the house.");
+            hasKey = true;
         }
         start();
     }
 
+    public void goToHouse(){
+        if(hasKey){
+            System.out.println("You opened the door using the key. You wonder what inside");
+        } else{
+            System.out.println("Door is locked. Might need to look around first");
+            start();
+        }
+    }
     public void fight() {
         if (hasSword) {
             System.out.println("You defeat the giant with your sword and run out of the cave!");
