@@ -1,9 +1,11 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class TextBasedAdventure {
     boolean hasSword = false;
     boolean hasKey = false;
     Scanner keyboardInput = new Scanner(System.in);
+    Random random = new Random();
 
     public void execute() {
         System.out.println("Welcome to Escape from the Cave! Press enter when you are ready to start...");
@@ -61,7 +63,11 @@ public class TextBasedAdventure {
             System.out.println("You steal the giant's treasure.");
             System.out.println("You defeat the giant with your sword and run out of the cave!");
         } else {
-            System.out.println("You run away from the giant while crying like a baby. Womp Womp!");
+            if (random.nextInt(100) + 1 == 1) {
+                System.out.println("You CONQUERED the beast and run out of the cave!");
+            } else {
+                System.out.println("You get stomped by the giant and red stuff goes everywhere.");
+            }
         }
     }
 
