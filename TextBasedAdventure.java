@@ -46,7 +46,7 @@ public class TextBasedAdventure {
 
     public void fight() {
         if (hasSword) {
-            System.out.println("You steal the giants treasure.")
+            System.out.println("You steal the giant's treasure.");
             System.out.println("You defeat the giant with your sword and run out of the cave!");
         } else {
             System.out.println("You get stomped by the giant and red stuff goes everywhere.");
