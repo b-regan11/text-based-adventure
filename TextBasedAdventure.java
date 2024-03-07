@@ -89,6 +89,23 @@ public class TextBasedAdventure {
             }
         }
     }
+    public void leatherFace() {
+        System.out.println("Oh no! You're in the Texas Chainsaw Massacre House!");
+        if (random.nextInt(100) + 1 == 1) {
+            System.out.println("The house is empty so you call 911 and leave");
+        } else {
+            System.out.println(" Leatherface is HERE !!!");
+            System.out.println(" Fight or flight?\n1. Fight \n2. Flight");
+            int input_LF = keyboardInput.nextInt();
+            if (input_LF == 1) {
+                System.out.println("** Hacked to Death **");
+            }
+            else if (input_LF == 2) {
+                System.out.println("** Running and Screaming **");
+            }
+        }
+    
+    }
 
     public static void main(String[] args) {
         new TextBasedAdventure().execute();
