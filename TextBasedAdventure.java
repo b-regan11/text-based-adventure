@@ -11,7 +11,15 @@ public class TextBasedAdventure {
         System.out.println("Welcome to Escape from the Cave! Press enter when you are ready to start...");
         keyboardInput.nextLine();
         System.out.println("You are trapped in a cave!");
-        start();
+
+        //Small chance to turn around and see the exit
+        if((int)(Math.random() * 50) + 1 == 1) {
+            System.out.println("You turn around and realize the exit was behind you! Don't you feel dumb.");
+
+        }
+        else {
+            start();
+        }
     }
 
     public void start() {
