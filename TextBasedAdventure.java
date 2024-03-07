@@ -13,7 +13,7 @@ public class TextBasedAdventure {
         System.out.println("You are trapped in a cave!");
 
         //Small chance to turn around and see the exit
-        if((int)(Math.random() * 50) + 1 == 1) {
+        if((int)(Math.random() * 60) + 1 == 1) {
             System.out.println("You turn around and realize the exit was behind you! Don't you feel dumb.");
 
         }
@@ -83,9 +83,9 @@ public class TextBasedAdventure {
             }
         } else {
             if (random.nextInt(100) + 1 == 1) {
-                System.out.println("You CONQUERED the beast and run out of the cave!");
+                System.out.println("You Killed the Beast and run out of the cave!");
             } else {
-                System.out.println("You get stomped by the giant and red stuff goes everywhere.");
+                System.out.println("The Giant ate you and you are eaten to death");
             }
         }
     }
