@@ -49,7 +49,7 @@ public class TextBasedAdventure {
             System.out.println("You steal the giant's treasure.");
             System.out.println("You defeat the giant with your sword and run out of the cave!");
         } else {
-            System.out.println("You get stomped by the giant and red stuff goes everywhere.");
+            System.out.println("You run away from the giant while crying like a baby. Womp Womp!");
         }
     }
 
