@@ -60,17 +60,27 @@ public class TextBasedAdventure {
 
     public void goToHouse(){
         if(hasKey){
-            System.out.println("You opened the door using the key. You wonder what inside");
-            leatherFace();
+            System.out.println("You opened the door using the key and enter.");
+            System.out.println("You walk around and hear faint voices around you.");
+            System.out.println("Eventually, you run into a ghost and they lead you to the exit.");
+            System.out.println("THE END!");
         } else{
             System.out.println("Door is locked. Might need to look around first");
             start();
         }
     }
+
+
     public void fight() {
         if (hasSword) {
             System.out.println("You steal the giant's treasure.");
-            System.out.println("You defeat the giant with your sword and run out of the cave!");
+            System.out.println("You defeat the giant with your sword. Would you like to\n1.Exit cave\n2.Go deeper for more treasure?");
+            int decision = keyboardInput.nextInt();
+            if(decision == 2){
+                System.out.println("You go deeper and find even more riches, but wonder how much money will ever fill the gaping hole in your heart.");
+            } else{
+                System.out.println(("You leave the cave contemplating your life choices."));
+            }
         } else {
             if (random.nextInt(100) + 1 == 1) {
                 System.out.println("You CONQUERED the beast and run out of the cave!");
