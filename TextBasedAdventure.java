@@ -48,6 +48,7 @@ public class TextBasedAdventure {
 
     public void fight() {
         if (hasSword) {
+            System.out.println("You steal the giant's treasure.");
             System.out.println("You defeat the giant with your sword and run out of the cave!");
         } else {
             if (random.nextInt(100) + 1 == 1) {
