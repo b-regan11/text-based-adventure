@@ -50,7 +50,10 @@ public class TextBasedAdventure {
 
     public void goToHouse(){
         if(hasKey){
-            System.out.println("You opened the door using the key. You wonder what inside");
+            System.out.println("You opened the door using the key and enter.");
+            System.out.println("You walk around and hear faint voices around you.");
+            System.out.println("Eventually, you run into a ghost and they lead you to the exit.");
+            System.out.println("THE END!");
         } else{
             System.out.println("Door is locked. Might need to look around first");
             start();
